@@ -14,10 +14,10 @@ class userController extends Controller
      */
     public function index(Request $request)
     {
-        //if(!$request->ajax()) return redirect('/');
+        if(!$request->ajax()) return redirect('/');
         $buscar = $request->buscar;
         $criterio = $request->criterio;
-        
+
         switch ($request->criterio) {
             case 'activo':
                 $valor = 1;
